@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-404</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Header image only -->
+        </div>
+
+        <div class="nav">
+            <div class="menu-icon" onclick="toggleMenu()">☰ Menu</div>
+            <a href="index.htm" class="menu-item">HOME</a>
+            <a href="about.htm" class="menu-item">ABOUT</a>
+            <a href="services.htm" class="menu-item">SERVICES</a>
+            <a href="contact.htm" class="menu-item">CONTACT</a>
+            <a href="quiz.htm" class="menu-item">QUIZ</a>
+            <a href="login.htm" class="menu-item">LOGIN</a>
+        </div>
+
+        <div class="content">
+            <div class="about">
+                <h1>Oops! Page Not Found.</h1>
+                <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                <p>Please check the URL you entered for any mistakes and try again. You can also use the menu above to navigate to another page.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024-2025 NeelTeluguTech. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle menu visibility in mobile view
+        function toggleMenu() {
+            var menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(function(item) {
+                item.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
