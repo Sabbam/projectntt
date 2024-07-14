@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+
+    </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Header image only -->
+        </div>
+
+        <div class="nav">
+            <div class="menu-icon" onclick="toggleMenu()">☰ Menu</div>
+            <a href="index.htm" class="menu-item">HOME</a>
+            <a href="about.htm" class="menu-item">ABOUT</a>
+            <a href="services.htm" class="menu-item">SERVICES</a>
+            <a href="contact.htm" class="menu-item">CONTACT</a>
+            <a href="quiz.htm" class="menu-item">QUIZ</a>
+            <a href="login.htm" class="menu-item">LOGIN</a>
+        </div>
+
+        <div class="content">
+            
+            <div class="about">
+            <div class="contact-form">
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p style="margin: 0; padding: 10px; font-size: 0.8em;">&copy; 2024-2025 NeelTeluguTech. All Rights Reserved.</p>
+                </div>
+</div>
+</body>
+<script>
+    // Function to toggle menu visibility in mobile view
+    function toggleMenu() {
+        var menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(function(item) {
+            item.classList.toggle('active');
+        });
+    }
+</script>
+</html>

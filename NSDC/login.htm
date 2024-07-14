@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles specific to the login form */
+        .login-form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: calc(100% - 20px); /* Adjusted width to account for padding */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .login-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Header image only -->
+        </div>
+
+        <div class="nav">
+            <div class="menu-icon" onclick="toggleMenu()">☰ Menu</div>
+            <a href="index.htm" class="menu-item">HOME</a>
+            <a href="about.htm" class="menu-item">ABOUT</a>
+            <a href="services.htm" class="menu-item">SERVICES</a>
+            <a href="contact.htm" class="menu-item">CONTACT</a>
+            <a href="quiz.htm" class="menu-item">QUIZ</a>
+            <a href="login.htm" class="menu-item">LOGIN</a>
+        </div>
+
+        <div class="content">
+            <div class="about">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form id="loginForm" onsubmit="validateLogin(event)">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024-2025 NeelTeluguTech. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle menu visibility in mobile view
+        function toggleMenu() {
+            var menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(function(item) {
+                item.classList.toggle('active');
+            });
+        }
+
+        // Function to validate login credentials
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Check hardcoded credentials (replace with backend validation)
+            if (username === 'sabbam' && password === 'sabbam@2004') {
+                alert('Login successful!');
+                // Redirect to dashboard or set session
+                sessionStorage.setItem('loggedIn', true);
+                window.location.href = 'dashboard.html'; // Redirect to dashboard page
+            } else {
+                alert('Invalid username or password. Please try again.');
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
